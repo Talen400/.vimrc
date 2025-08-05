@@ -50,11 +50,9 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " ALE config
 let g:ale_enabled = 1
 let g:ale_linters = {'c': ['gcc']}  " Only essential
-
-" Flags (42)
 let g:ale_c_gcc_options = '-Wall -Wextra -Werror -pedantic -Iinclude'
 
-" Verific (balancea performance e utilidade)
+" Verific (balance between perfomance and utility)
 let g:ale_lint_on_text_changed = 'normal'  " Check when type
 let g:ale_lint_on_insert_leave = 1         " Check when go out of insert mode
 let g:ale_lint_on_save = 1                 " Always checking when save
@@ -62,8 +60,12 @@ let g:ale_lint_on_save = 1                 " Always checking when save
 " Feedback visual clean
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
-highlight ALEErrorSign ctermfg=red
-highlight ALEWarningSign ctermfg=yellow
+let g:ale_virtualtext_cursor = 1
+let g:ale_virtualtext_prefix = ' ▶ '
+highlight ALEErrorSign ctermfg=red guifg=red
+highlight ALEWarningSign ctermfg=yellow guifg=orange
+highlight ALEVirtualTextError ctermfg=red guifg=red
+highlight ALEVirtualTextWarning ctermfg=yellow guifg=orange
 
 " theme airline
 let g:airline_theme='minimalist'
