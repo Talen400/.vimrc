@@ -9,6 +9,8 @@ set shiftwidth=4
 set autoindent
 set colorcolumn=81
 
+let mapleader = "\\"
+
 highlight ColorColumn ctermbg=darkgray guibg=darkgray
 
 autocmd FileType c setlocal comments=s1:/*,mb:**,elx:*/
@@ -46,11 +48,13 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <silent> <leader>nr :NERDTreeRefreshRoot<CR>
 
 " ALE config
 let g:ale_enabled = 1
 let g:ale_linters = {'c': ['gcc']}  " Only essential
 let g:ale_c_gcc_options = '-Wall -Wextra -Werror -pedantic -Iinclude'
+let g:ale_use_terminal = 0
 
 " Verific (balance between perfomance and utility)
 let g:ale_lint_on_text_changed = 'normal'  " Check when type
