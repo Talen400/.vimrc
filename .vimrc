@@ -17,15 +17,9 @@ autocmd FileType c setlocal comments=s1:/*,mb:**,elx:*/
 
 autocmd FileType c setlocal cindent
 
-autocmd FileType c nnoremap <F5> :!gcc -Wall -Wextra -Werror % -o test && ./test<CR>
-
 autocmd FileType c nnoremap <F6> :!norminette %<CR>
 
-autocmd FileType c nnoremap <F8> :!gcc -g % -o gdb.out && gdb ./gdb.out<CR>
-
-autocmd FileType c nnoremap <F9> :!gcc -g % -o gdb.out && gdb --tui ./gdb.out<CR>
-
-nnoremap <F7> :set list!<CR>
+nnoremap <F5> :set list!<CR>
 
 set listchars=tab:>-,trail:.,nbsp:.
 
