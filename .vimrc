@@ -46,11 +46,11 @@ nnoremap <silent> <leader>nr :NERDTreeRefreshRoot<CR>
 
 " ALE config
 let g:ale_enabled = 1
-let g:ale_linters = {'c': ['gcc']}  " Only essential
+let g:ale_linters = {'c': ['gcc']}
 let g:ale_c_gcc_options = '-Wall -Wextra -Werror -pedantic -Iinclude'
 let g:ale_use_terminal = 0
 
-" Verific (balance between perfomance and utility)
+" Verific
 let g:ale_lint_on_text_changed = 'normal'  " Check when type
 let g:ale_lint_on_insert_leave = 1         " Check when go out of insert mode
 let g:ale_lint_on_save = 1                 " Always checking when save
